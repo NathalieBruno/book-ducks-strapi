@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "theme_settings",
+  "info": {
+    "singularName": "theme-setting",
+    "pluralName": "theme-settings",
+    "displayName": "Theme Setting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "IsSpring": {
+      "type": "boolean",
+      "default": false
+    },
+    "IsAutumn": {
+      "type": "boolean",
+      "default": false
+    },
+    "IsSummer": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

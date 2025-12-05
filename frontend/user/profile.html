@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Min profil - BookDucks</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="/frontend/api.js"></script>
+    <script type="module" src="/frontend/user/profile.js"></script>
+    <script type="module" src="/frontend/login.js"></script>
+    <link rel="stylesheet" href="/frontend/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Lilla Bokshoppen</h1>
+      <div id="user-controls"></div>
+    </header>
+
+    <main>
+      <section class="collapsible-section">
+        <div class="section-header" onclick="toggleSection('wishlist')">
+          <h2>Din önskelista</h2>
+          <span class="toggle-icon" id="wishlist-icon">▼</span>
+        </div>
+        <div class="section-content expanded" id="wishlist-content">
+          <div class="sort-controls">
+            <button id="sort-title" class="sort-btn">Sortera titlar (A–Ö)</button>
+            <button id="sort-author" class="sort-btn">Sortera författare (A–Ö)</button>
+          </div>
+          <div id="wishlist-container"></div>
+        </div>
+      </section>
+      <section class="collapsible-section ratings-collapse">
+        <div class="section-header" onclick="toggleSection('ratings')">
+          <h2>Dina betygsatta böcker</h2>
+          <span class="toggle-icon" id="ratings-icon">▼</span>
+        </div>
+        <div class="section-content expanded" id="ratings-content">
+          <div class="sort-controls">
+            <button id="sort-rating-title" class="sort-btn">Sortera titlar (A–Ö)</button>
+            <button id="sort-rating-author" class="sort-btn">Sortera författare (A–Ö)</button>
+            <button id="sort-rating-rating" class="sort-btn">Sortera efter betyg ↓</button>
+          </div>
+          <div id="ratings-container"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

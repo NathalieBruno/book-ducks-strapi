@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookDucks</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="/frontend/api.js"></script>
+    <script type="module" src="/frontend/index.js"></script>
+    <script type="module" src="/frontend/login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="/frontend/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Lilla Bokshoppen</h1>
+      <div id="user-controls"></div>
+    </header>
+
+    <main>
+      <section id="books-section">
+        <h2>Månadens böcker</h2>
+        <div id="books-container"></div>
+      </section>
+    </main>
+
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Logga in</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="email">E-post</label>
+            <input type="email" id="email" placeholder="Din e-post" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Lösenord</label>
+            <input type="password" id="password" placeholder="Ditt lösenord" required />
+          </div>
+          <p class="forgot-password"><a href="#">Glömt ditt lösenord?</a></p>
+          <button type="submit" class="btn btn-primary">Logga in</button>
+        </form>
+        <div class="modal-footer">
+          <p>Är du ny här? <a href="#" id="show-register">Registrera dig</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Skapa ett nytt konto</h2>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="register-username">Användarnamn</label>
+            <input type="text" id="register-username" placeholder="Välj ett användarnamn" required />
+          </div>
+          <div class="form-group">
+            <label for="register-email">E-post</label>
+            <input type="email" id="register-email" placeholder="Din e-post" required />
+          </div>
+          <div class="form-group">
+            <label for="register-password">Lösenord</label>
+            <input type="password" id="register-password" placeholder="Välj ett lösenord" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Registrera</button>
+        </form>
+        <div class="modal-footer">
+          <p>Har du redan ett konto? <a href="#" id="show-login">Logga in</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
