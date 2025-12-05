@@ -138,9 +138,9 @@ const userUI = (user) => {
   if (userControls) {
     userControls.innerHTML = `
             ${
-              window.location.pathname === "/frontend/index.html"
+              window.location.pathname === "/index.html"
                 ? `<span>Välkommen till bokklubben <strong>${user.username}</strong>!</span> <a href="user/profile.html" class="btn btn-primary">Min profil</a>`
-                : `<span><strong>${user.username}</strong>´s profilsida</span> <a href="/frontend/index.html" class="btn btn-primary">Till förstasidan</a>`
+                : `<span><strong>${user.username}</strong>´s profilsida</span> <a href="index.html" class="btn btn-primary">Till förstasidan</a>`
             }
             <button id="logout-btn" class="btn btn-primary">Logga ut</button>
         `;

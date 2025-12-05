@@ -26,8 +26,8 @@ export class Api {
     const token = this.getAuthHeader();
     console.log("Min token:", token);
 
-    if (!token && window.location.pathname !== "/frontend/index.html") {
-      window.location.href = "/frontend/index.html";
+    if (!token && window.location.pathname !== "/index.html") {
+      window.location.href = "index.html";
       return false;
     }
 
